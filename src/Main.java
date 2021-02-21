@@ -44,14 +44,15 @@ public class Main {
                 sachovnicaP[7][4]='Q';
                 sachovnicaP[7][3]='K';
 
-        int kolo = 0;
-        boolean hra = true;
-        boolean naRadeJeBiely;
-        int kralC =0;
-        int kralB = 0;
+        int kolo = 0;  // vzdy ked skonci niekto svoj tah, zacne nove kolo
+        boolean hra = true; // hra este neskoncila
+        boolean naRadeJeBiely; // kto je na rade..
+        int kralC =0; // kral cierny
+        int kralB = 0; // kral biely
 
         while (hra) {
 
+            // mriezkovanie..
             for (char[] chars : sachovnicaP) {
                 System.out.print("|");
                 for (int b = 0; b < sachovnicaP.length; b++) {
@@ -60,6 +61,7 @@ public class Main {
                 guider.mriezka();
             }
 
+            // kto je na rade
             if (kolo % 2 == 0) {
                 System.out.println("na rade je biely");
                 naRadeJeBiely=true;
@@ -68,9 +70,10 @@ public class Main {
                 naRadeJeBiely=false;
             }
             kolo++;
+            // aktivita figuriek
             niecoSaDeje.trololo(sachovnicaP,naRadeJeBiely);
 
-
+            // obsahuje pole bieleho alebo cierneho krala ?
             for (char[] pole:sachovnicaP) {
                 for (char ch:pole) {
                     if (ch == 'k'){
@@ -79,17 +82,20 @@ public class Main {
                         kralC++;
                     }
                 }}
+            // ak pole neobsahuje bieleho krala hra skonci..
             if (kralB==0){
                 hra = false;
                 System.out.println("vyhral Cierny");
                 System.out.println("za tolkoto kol: "+ kolo);
             }else{
+                // ak pole neobsahuje cierneho krala hra konci..
                 if (kralC==0){
                 hra  = false;
                 System.out.println("vyhal Biely");
                 System.out.println("za tolkoto kol: "+ kolo);
               }
             }
+            // reset poctu kralov inak by hra neskoncila..
             kralB=0;
             kralC=0;
         }

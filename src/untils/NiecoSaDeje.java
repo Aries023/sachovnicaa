@@ -8,6 +8,7 @@ public class NiecoSaDeje {
     public char [][] trololo(char [][] sachovnica, boolean radaJeNa){
         CisloDavac cisloDavac = new CisloDavac();
 
+        // vyber si figurku
         System.out.println("zadaj suradnice svojej figurky ktorou chces pohnut");
         System.out.print("prve cislo (riadok) : ");
         int x = cisloDavac.getCislo();
