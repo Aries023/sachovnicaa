@@ -1,7 +1,6 @@
 package untils;
 
 public class Vyhadzovac {
-    NiecoSaDeje niecoSaDeje = new NiecoSaDeje();
 
     public boolean vyhadzovacBiely(char [][] sachovnica, int x, int y){
         return switch (sachovnica[x][y]) {

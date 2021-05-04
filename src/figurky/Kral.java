@@ -10,7 +10,7 @@ public class Kral {
     Vyhadzovac vyhadzovac = new Vyhadzovac();
 
 
-    public char [][] kralBiely(char [][] sachovnica, int x, int y){
+    public void kralBiely(char [][] sachovnica, int x, int y){
         System.out.println("zadaj kam sa chces posunut");
         System.out.print("prve cislo (riadok) : ");
         int a = cisloDavac.getCislo();
@@ -31,10 +31,9 @@ public class Kral {
             System.out.println("fck it.. nieco si urobil zle! skus to znova");
             niecoSaDeje.trololo(sachovnica,true);
         }
-        return sachovnica;
     }
 
-    public char [][] kralCierny(char [][] sachovnica, int x, int y){
+    public void kralCierny(char [][] sachovnica, int x, int y){
         System.out.println("zadaj kam sa chces posunut");
         System.out.print("prve cislo (riadok) : ");
         int a = cisloDavac.getCislo();
@@ -55,6 +54,5 @@ public class Kral {
             System.out.println("fck it.. nieco si urobil zle! skus to znova");
             niecoSaDeje.trololo(sachovnica,false);
         }
-        return sachovnica;
     }
 }

@@ -9,8 +9,7 @@ public class CisloDavac {
     public int getCislo (){
         while (true){
             try {
-                int a = sc.nextInt();
-                return a;
+                return sc.nextInt();
             }catch (Exception e){
                 System.out.println("musis zadat cislo");
             }

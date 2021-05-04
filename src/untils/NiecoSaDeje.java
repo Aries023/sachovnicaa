@@ -5,7 +5,7 @@ import figurky.*;
 
 public class NiecoSaDeje {
 
-    public char [][] trololo(char [][] sachovnica, boolean radaJeNa){
+    public void trololo(char [][] sachovnica, boolean radaJeNa){
         CisloDavac cisloDavac = new CisloDavac();
 
         // vyber si figurku
@@ -28,68 +28,31 @@ public class NiecoSaDeje {
         if (radaJeNa){
             // biely
             switch (sachovnica[x][y]) {
-                case 'p' -> {
-                    pesiak.pesiakBiely(sachovnica, x, y);
-                    return sachovnica;
-                }
-                case 's' -> {
-                    strelec.strelecBiely(sachovnica, x, y);
-                    return sachovnica;
-                }
-                case 'k' -> {
-                    kral.kralBiely(sachovnica, x, y);
-                    return sachovnica;
-                }
-                case 'v' -> {
-                    vez.vezBiela(sachovnica, x, y);
-                    return sachovnica;
-                }
-                case 'q' -> {
-                    kralovna.kralovnaBiela(sachovnica, x, y);
-                    return sachovnica;
-                }
-                case 'h' -> {
-                    kon.konikBiely(sachovnica, x, y);
-                    return sachovnica;
-                }
+                case 'p' -> pesiak.pesiakBiely(sachovnica, x, y);
+                case 's' -> strelec.strelecBiely(sachovnica, x, y);
+                case 'k' -> kral.kralBiely(sachovnica, x, y);
+                case 'v' -> vez.vezBiela(sachovnica, x, y);
+                case 'q' -> kralovna.kralovnaBiela(sachovnica, x, y);
+                case 'h' -> kon.konikBiely(sachovnica, x, y);
                 default -> {
                     System.out.println("oh no! nieco si dodubal!");
-                    trololo(sachovnica, radaJeNa);
+                    trololo(sachovnica, true);
                 }
             }
         }else {
             // cierny
             switch (sachovnica[x][y]) {
-                case 'P' -> {
-                    pesiak.pesiakCierny(sachovnica, x, y);
-                    return sachovnica;
-                }
-                case 'S' -> {
-                    strelec.strelecCierny(sachovnica, x, y);
-                    return sachovnica;
-                }
-                case 'K' -> {
-                    kral.kralCierny(sachovnica, x, y);
-                    return sachovnica;
-                }
-                case 'V' -> {
-                    vez.vezCierna(sachovnica, x, y);
-                    return sachovnica;
-                }
-                case 'Q' -> {
-                    kralovna.kralovnaCierna(sachovnica, x, y);
-                    return sachovnica;
-                }
-                case 'H' -> {
-                    kon.konikCierny(sachovnica, x, y);
-                    return sachovnica;
-                }
+                case 'P' -> pesiak.pesiakCierny(sachovnica, x, y);
+                case 'S' -> strelec.strelecCierny(sachovnica, x, y);
+                case 'K' -> kral.kralCierny(sachovnica, x, y);
+                case 'V' -> vez.vezCierna(sachovnica, x, y);
+                case 'Q' -> kralovna.kralovnaCierna(sachovnica, x, y);
+                case 'H' -> kon.konikCierny(sachovnica, x, y);
                 default -> {
                     System.out.println("oh no! nieco si dodubal!");
-                    trololo(sachovnica, radaJeNa);
+                    trololo(sachovnica, false);
                 }
             }
         }
-        return sachovnica;
     }
 }
