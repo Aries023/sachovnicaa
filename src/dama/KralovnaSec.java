@@ -1,4 +1,8 @@
-package figurky;
+package dama;
+
+// tato class je pripravena az budem chciet pridat dámu.
+// funkcia tejto class je skontrolovat sachovnicu na konci tahu.
+// ak je pesiak na druhej strane sachovnice, zmeni ho v kralovnu
 
 public class KralovnaSec {
 

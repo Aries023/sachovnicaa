@@ -1,7 +1,10 @@
-package figurky;
+package dama;
 
 import untils.CisloDavac;
 import untils.NiecoSaDeje;
+
+// PesiakZlyhanie v skutocnosti nie je zlyhanie ale bola to uplne prva figurka ktora mala fungovat v sachu,
+// ale spravil som ju vhodnu na dámu.. ponechal som ju tu s tym ze v buducnosti mozno doplnim aj dámu
 
 public class PesiakZlyhanie {
     CisloDavac cisloDavac = new CisloDavac();
